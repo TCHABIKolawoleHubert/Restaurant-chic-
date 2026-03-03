@@ -1,51 +1,49 @@
 // ============================================
-// ÉRY DELICE — SCRIPT v2
+// ÉRY DELICE — SCRIPT v2 (photos locales)
 // ============================================
 
-// ---- MENU DE LA SEMAINE (modifiable chaque semaine) ----
 const MENU_SEMAINE = [
   {
     jour: "Lundi",
     name: "Riz Jollof Festif",
     price: "3 800 FCFA",
     spots: "Places restantes : 8",
-    img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80"
+    img: "photos/plat2.jpg"
   },
   {
     jour: "Mercredi",
     name: "Djinkoumé Royal",
     price: "4 500 FCFA",
     spots: "Places restantes : 5",
-    img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
+    img: "photos/plat4.jpg"
   },
   {
     jour: "Jeudi",
     name: "Riz au Gras Traditionnel",
     price: "3 500 FCFA",
     spots: "Places restantes : 10",
-    img: "https://images.unsplash.com/photo-1516684732162-798a0062be99?w=600&q=80"
+    img: "photos/plat15.jpg"
   },
   {
     jour: "Samedi",
     name: "Amiwô & Poulet Braisé",
     price: "5 000 FCFA",
     spots: "Places restantes : 6",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80"
+    img: "photos/plat12.jpg"
   }
 ];
 
-// ---- TOUS LES PLATS ----
 const MENU = [
   {
     id: 1,
-    name: "Djinkoumé Royal",
-    cat: "plat principal",
+    name: "Pâte Noire & Légumes au Poisson Fumé",
+    cat: "légumes",
     badge: "Au programme",
     badgeType: "programme",
-    price: "4 500 FCFA",
-    time: "⏱ Préparation 45 min",
-    desc: "Une pâte de maïs fermentée onctueuse, façonnée à la main avec une maîtrise héritée de générations. Accompagnée d'un poulet braisé lentement aux épices du terroir et d'une salade de légumes croquants — un voyage sensoriel vers l'authenticité béninoise.",
-    img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=600&q=80"
+    price: "3 200 FCFA",
+    time: "⏱ Préparation 40 min",
+    desc: "Une pâte de sorgho sombre et veloutée, servie avec un accompagnement de légumes finement égrainés et parfumés au poisson fumé. La fumée, les épices, la texture — tout se retrouve dans une assiette d'une générosité absolue.",
+    img: "photos/plat1.jpg"
   },
   {
     id: 2,
@@ -55,77 +53,33 @@ const MENU = [
     badgeType: "programme",
     price: "3 800 FCFA",
     time: "⏱ Préparation 50 min",
-    desc: "Cuit lentement dans une sauce tomate parfumée de laurier, de thym et d'épices secrètes. Chaque grain imprégné de saveur, chaque bouchée une explosion de chaleur et de richesse. Servi avec un poulet rôti à la peau dorée et craquante.",
-    img: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80"
+    desc: "Cuit lentement dans une sauce tomate parfumée de laurier, de thym et d'épices secrètes. Chaque grain imprégné de saveur, chaque bouchée une explosion de chaleur et de richesse. Servi avec un poulet rôti à la peau dorée.",
+    img: "photos/plat2.jpg"
   },
   {
     id: 3,
-    name: "Légumes Égrainés au Poisson",
-    cat: "légumes",
-    badge: "Sur commande",
-    badgeType: "commande",
-    price: "3 200 FCFA",
-    time: "⏱ Préparation 40 min",
-    desc: "Un lit de légumes verts finement hachés, parfumés et mijotés avec des morceaux de poisson fumé aux chairs fondantes. La fraîcheur des feuilles rencontre la profondeur marine — une harmonie délicate que la nature seule peut offrir.",
-    img: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=80"
-  },
-  {
-    id: 4,
-    name: "Amiwô & Poulet Braisé",
-    cat: "plat principal",
-    badge: "Sur commande",
-    badgeType: "commande",
-    price: "5 000 FCFA",
-    time: "⏱ Préparation 1h",
-    desc: "La pâte de maïs orangée d'Amiwô, douce et veloutée, trône au centre du plat comme une couronne. Flanquée d'un poulet braisé à feu vif jusqu'à l'os craquant et d'une salsa de piments et oignons confits — un festin qui rassasie le corps et réjouit l'âme.",
-    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80"
-  },
-  {
-    id: 5,
-    name: "Dokounou & Poissons Grillés",
-    cat: "plat principal",
-    badge: "Sur commande",
-    badgeType: "commande",
-    price: "3 500 FCFA",
-    time: "⏱ Préparation 35 min",
-    desc: "Les célèbres galettes de maïs cuites à la vapeur — une texture unique, ni pâte ni pain, quelque chose d'entièrement singulier. Accompagnées de poissons grillés à la chair juteuse et d'une sauce rouge vif qui enflamme les sens avec douceur.",
-    img: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=600&q=80"
-  },
-  {
-    id: 6,
-    name: "Poulet Mayo Banane Plantain",
-    cat: "accompagnement",
-    badge: "Au programme",
-    badgeType: "programme",
-    price: "4 200 FCFA",
-    time: "⏱ Préparation 45 min",
-    desc: "Des tranches de banane plantain frites à la perfection — caramélisées dehors, fondantes dedans — accompagnent un poulet nappé d'une sauce mayo-épices maison d'une onctuosité remarquable. Un mariage sucré-salé audacieux et inoubliable.",
-    img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=80"
-  },
-  {
-    id: 7,
-    name: "Atassi & Tilapia en Sauce",
-    cat: "riz",
-    badge: "Sur commande",
-    badgeType: "commande",
-    price: "3 600 FCFA",
-    time: "⏱ Préparation 55 min",
-    desc: "Le riz aux haricots emblématique du Bénin — chaque grain porte la mémoire d'une cuisine populaire et noble à la fois. Servi avec un tilapia en sauce rouge généreuse et un œuf dur, ce plat est une ode à la générosité africaine.",
-    img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&q=80"
-  },
-  {
-    id: 8,
     name: "Spaghetti Rouge Maison",
     cat: "plat principal",
     badge: "Au programme",
     badgeType: "programme",
     price: "2 800 FCFA",
     time: "⏱ Préparation 30 min",
-    desc: "Des spaghettis cuits dans une sauce tomate épicée maison, agrémentés de saucisses tendres, de légumes colorés et de sardines marinées. Simple en apparence, extraordinaire en saveur — un plat qui réconcilie tradition et modernité.",
-    img: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&q=80"
+    desc: "Des spaghettis cuits dans une sauce tomate épicée maison, agrémentés de saucisses tendres, d'un œuf dur, de légumes colorés et de sardines marinées. Simple en apparence, extraordinaire en saveur.",
+    img: "photos/plat3.jpg"
   },
   {
-    id: 9,
+    id: 4,
+    name: "Djinkoumé Royal",
+    cat: "plat principal",
+    badge: "Au programme",
+    badgeType: "programme",
+    price: "4 500 FCFA",
+    time: "⏱ Préparation 45 min",
+    desc: "Une pâte de maïs fermentée onctueuse, façonnée à la main avec une maîtrise héritée de générations. Accompagnée d'un poulet braisé lentement aux épices du terroir et d'une salade de légumes croquants — un voyage sensoriel vers l'authenticité béninoise.",
+    img: "photos/plat4.jpg"
+  },
+  {
+    id: 5,
     name: "Pâte Blanche & Sauce Tomate",
     cat: "plat principal",
     badge: "Sur commande",
@@ -133,40 +87,161 @@ const MENU = [
     price: "3 000 FCFA",
     time: "⏱ Préparation 40 min",
     desc: "La pâte blanche lisse comme de la soie, baignant dans une sauce tomate riche et généreuse avec des morceaux de viande mijotée. Des feuilles d'épinards émergent comme un écrin vert — rustique, réconfortant, parfaitement équilibré.",
-    img: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80"
+    img: "photos/plat5.jpg"
+  },
+  {
+    id: 6,
+    name: "Dokounou & Poissons Grillés",
+    cat: "plat principal",
+    badge: "Sur commande",
+    badgeType: "commande",
+    price: "3 500 FCFA",
+    time: "⏱ Préparation 35 min",
+    desc: "Les célèbres galettes de maïs cuites à la vapeur — une texture unique, ni pâte ni pain. Accompagnées de poissons grillés à la chair juteuse et d'une sauce rouge vif qui enflamme les sens avec douceur et générosité.",
+    img: "photos/plat6.jpg"
+  },
+  {
+    id: 7,
+    name: "Poulet Mayo Banane Plantain",
+    cat: "accompagnement",
+    badge: "Au programme",
+    badgeType: "programme",
+    price: "4 200 FCFA",
+    time: "⏱ Préparation 45 min",
+    desc: "Des tranches de banane plantain frites à la perfection — caramélisées dehors, fondantes dedans — accompagnent un poulet nappé d'une sauce mayo-épices maison d'une onctuosité remarquable. Un mariage sucré-salé audacieux et inoubliable.",
+    img: "photos/plat7.jpg"
+  },
+  {
+    id: 8,
+    name: "Riz Jollof & Poulet Rôti",
+    cat: "riz",
+    badge: "Au programme",
+    badgeType: "programme",
+    price: "4 000 FCFA",
+    time: "⏱ Préparation 50 min",
+    desc: "Le riz Jollof dans sa version la plus généreuse — un poulet entier rôti posé fièrement sur un lit de riz orangé et parfumé. Une assiette qui nourrit autant les yeux que l'estomac, idéale pour les grandes occasions.",
+    img: "photos/plat8.jpg"
+  },
+  {
+    id: 9,
+    name: "Atassi Complet",
+    cat: "riz",
+    badge: "Sur commande",
+    badgeType: "commande",
+    price: "3 600 FCFA",
+    time: "⏱ Préparation 55 min",
+    desc: "Le grand classique béninois dans toute sa splendeur — riz aux haricots rouges, spaghettis dorés, poisson braisé, poulet en sauce et œuf dur. Un plat-festin qui célèbre l'abondance et la richesse de notre cuisine traditionnelle.",
+    img: "photos/plat9.jpg"
   },
   {
     id: 10,
-    name: "Banane Plantain & Omelette",
+    name: "Tilapia en Sauce Tomate",
+    cat: "plat principal",
+    badge: "Sur commande",
+    badgeType: "commande",
+    price: "4 500 FCFA",
+    time: "⏱ Préparation 50 min",
+    desc: "Un tilapia entier mijoté dans une sauce tomate généreuse aux oignons, poivrons et épices locales. La chair tendre du poisson s'imprègne de chaque arôme — un plat marin d'une profondeur aromatique irrésistible.",
+    img: "photos/plat10.jpg"
+  },
+  {
+    id: 11,
+    name: "Plantain Frit & Omelette",
     cat: "accompagnement",
     badge: "Au programme",
     badgeType: "programme",
     price: "2 500 FCFA",
     time: "⏱ Préparation 20 min",
-    desc: "L'alliance la plus sincère de notre cuisine — des tranches de plantain dorées accompagnent une omelette moelleuse garnie d'oignons, de poivrons et d'une touche de piment. Disponible le matin, le midi ou le soir — toujours parfait.",
-    img: "https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&q=80"
+    desc: "L'alliance la plus sincère de notre cuisine — des tranches de plantain dorées accompagnent une omelette moelleuse garnie d'oignons et de poivrons. Disponible matin, midi ou soir — simple, savoureux, toujours parfait.",
+    img: "photos/plat11.jpg"
   },
   {
-    id: 11,
+    id: 12,
+    name: "Amiwô Rouge & Poulet Braisé",
+    cat: "plat principal",
+    badge: "Sur commande",
+    badgeType: "commande",
+    price: "5 000 FCFA",
+    time: "⏱ Préparation 1h",
+    desc: "La pâte de maïs rouge d'Amiwô, dense et parfumée, accompagnée d'un poulet braisé à la peau croustillante, d'une sauce pimentée et d'une julienne de légumes croquants. Un plat complet, généreux et profondément ancré dans notre terroir.",
+    img: "photos/plat12.jpg"
+  },
+  {
+    id: 13,
+    name: "Omelette Maison & Plantain",
+    cat: "accompagnement",
+    badge: "Au programme",
+    badgeType: "programme",
+    price: "2 800 FCFA",
+    time: "⏱ Préparation 20 min",
+    desc: "Une omelette généreuse aux légumes du jardin — tomates, poivrons, oignons fondants — servie avec de belles tranches de plantain frit bien doré. Le petit-déjeuner des champions, élevé au rang de plat de caractère.",
+    img: "photos/plat13.jpg"
+  },
+  {
+    id: 14,
+    name: "Assortiment Plantain Frit",
+    cat: "accompagnement",
+    badge: "Au programme",
+    badgeType: "programme",
+    price: "1 500 FCFA",
+    time: "⏱ Préparation 15 min",
+    desc: "Deux variétés de plantain frit dans une même assiette — le plantain mûr caramélisé et le plantain vert croustillant. Un accompagnement incontournable qui sublime n'importe quel plat principal.",
+    img: "photos/plat14.jpg"
+  },
+  {
+    id: 15,
+    name: "Riz Festif & Poulet Frit",
+    cat: "riz",
+    badge: "Au programme",
+    badgeType: "programme",
+    price: "4 200 FCFA",
+    time: "⏱ Préparation 50 min",
+    desc: "Un riz Jollof joliment présenté en forme de cœur, accompagné d'un poulet frit croustillant, d'un coleslaw frais et maison, et de plantain grillé. La présentation soignée pour les moments qui comptent.",
+    img: "photos/plat15.jpg"
+  },
+  {
+    id: 16,
     name: "Ragoût de Légumes & Riz",
     cat: "légumes",
     badge: "Sur commande",
     badgeType: "commande",
     price: "3 800 FCFA",
     time: "⏱ Préparation 1h",
-    desc: "Haricots verts, carottes, pommes de terre mijotés avec du bœuf tendre dans un bouillon parfumé aux herbes fraîches. Sur un lit de riz vapeur délicat, ce plat réunit la terre et ses richesses dans votre assiette avec une générosité sans retenue.",
-    img: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=600&q=80"
+    desc: "Haricots verts, carottes, pommes de terre et bœuf tendre mijotés dans un bouillon parfumé aux herbes fraîches. Sur un lit de riz vapeur délicat — un plat qui réunit la terre et ses richesses dans votre assiette.",
+    img: "photos/plat16.jpg"
   },
   {
-    id: 12,
-    name: "Riz aux Haricots & Sauce Poisson",
+    id: 17,
+    name: "Riz & Pois Chiches en Sauce",
+    cat: "riz",
+    badge: "Sur commande",
+    badgeType: "commande",
+    price: "3 000 FCFA",
+    time: "⏱ Préparation 45 min",
+    desc: "Un riz blanc immaculé accompagné de pois chiches mijotés dans une sauce tomate épicée, couronné d'un œuf dur. Un plat végétarien riche en protéines, nourrissant et plein de caractère.",
+    img: "photos/plat17.jpg"
+  },
+  {
+    id: 18,
+    name: "Riz Haricots & Sauce Poisson",
+    cat: "riz",
+    badge: "Sur commande",
+    badgeType: "commande",
+    price: "3 400 FCFA",
+    time: "⏱ Préparation 45 min",
+    desc: "Le riz aux haricots servi avec une sauce poisson braisé d'une générosité irréprochable. Les morceaux de poisson nappés d'une sauce tomate épicée révèlent une complexité aromatique qui se construit à chaque bouchée.",
+    img: "photos/plat18.jpg"
+  },
+  {
+    id: 19,
+    name: "Atassi & Poulet en Sauce",
     cat: "riz",
     badge: "Au programme",
     badgeType: "programme",
-    price: "3 400 FCFA",
-    time: "⏱ Préparation 45 min",
-    desc: "Un riz blanc aux haricots servi avec une sauce poisson braisé d'une générosité irréprochable. Les morceaux de poisson nappés d'une sauce tomate épicée révèlent une complexité aromatique qui se construit à chaque bouchée.",
-    img: "https://images.unsplash.com/photo-1516684732162-798a0062be99?w=600&q=80"
+    price: "3 800 FCFA",
+    time: "⏱ Préparation 55 min",
+    desc: "Le riz aux haricots noir-œil servi avec des morceaux de poulet fondants dans une sauce tomate onctueuse, garni d'oignons rouges marinés. Chaque élément se complète — un plat équilibré, coloré et profondément satisfaisant.",
+    img: "photos/plat19.jpg"
   }
 ];
 
