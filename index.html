@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ERI~Delice — Traiteur à Commande</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav__logo"><span class="nav__logo-icon">✦</span><span>Éry Delice</span></div>
+    <ul class="nav__links">
+      <li><a href="#menu-semaine">Menu du moment</a></li>
+      <li><a href="#specialites">Nos Plats</a></li>
+      <li><a href="#comment-commander">Commander</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/22900000000" target="_blank" class="nav__cta">Réserver un plat</a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <div class="nav__mobile" id="navMobile">
+    <a href="#menu-semaine" class="nav__mobile-link">Menu du moment</a>
+    <a href="#specialites" class="nav__mobile-link">Nos Plats</a>
+    <a href="#comment-commander" class="nav__mobile-link">Commander</a>
+    <a href="#contact" class="nav__mobile-link">Contact</a>
+    <a href="https://wa.me/22900000000" target="_blank" class="nav__mobile-cta">Réserver via WhatsApp</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"><div class="hero__overlay"></div><div class="hero__grain"></div></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span class="hero__line"></span>Traiteur à Commande — Porto-Novo, Bénin<span class="hero__line"></span>
+      </p>
+      <h1 class="hero__title"><em>Éry</em> Delice</h1>
+      <p class="hero__slogan">L'art de nourrir l'âme</p>
+      <p class="hero__phrase">
+        Nous cuisinons sur commande, avec intention et générosité.<br />
+        Réservez votre repas 2 à 3 jours à l'avance — nous faisons le reste.
+      </p>
+      <div class="hero__btns">
+        <a href="#menu-semaine" class="hero__btn hero__btn--primary">
+          <span>Voir le menu du moment</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#comment-commander" class="hero__btn hero__btn--ghost">Comment commander ?</a>
+      </div>
+    </div>
+    <div class="hero__scroll"><span>Défiler</span><div class="hero__scroll-line"></div></div>
+  </section>
+
+  <!-- BANNIÈRE INFO -->
+  <div class="info-banner">
+    <div class="container info-banner__inner">
+      <div class="info-banner__item">
+        <span class="info-banner__icon">📅</span>
+        <span>Commande <strong>2 à 3 jours à l'avance</strong></span>
+      </div>
+      <div class="info-banner__sep">✦</div>
+      <div class="info-banner__item">
+        <span class="info-banner__icon">💳</span>
+        <span>Paiement <strong>Mobile Money avant préparation</strong></span>
+      </div>
+      <div class="info-banner__sep">✦</div>
+      <div class="info-banner__item">
+        <span class="info-banner__icon">🍽️</span>
+        <span>Menu publié <strong>chaque semaine</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU DE LA SEMAINE -->
+  <section class="menu-semaine" id="menu-semaine">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Planning en cours</p>
+        <h2 class="section-title">Menu de la Semaine</h2>
+        <p class="section-desc">Voici ce que nous avons prévu de cuisiner cette semaine. Réservez votre portion avant qu'il ne soit trop tard.</p>
+      </div>
+      <div class="semaine-grid" id="semaineGrid"></div>
+      <p class="semaine-note">✦ Le menu est mis à jour chaque semaine. Suivez-nous ou contactez-nous pour ne rien manquer.</p>
+    </div>
+  </section>
+
+  <!-- TOUS LES PLATS -->
+  <section class="specialites" id="specialites">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Notre Répertoire</p>
+        <h2 class="section-title">Tous Nos Plats</h2>
+        <p class="section-desc">Tous ces plats peuvent être commandés sur mesure. Choisissez, indiquez votre date souhaitée, nous cuisinons pour vous.</p>
+      </div>
+      <div class="filters">
+        <div class="search-wrap">
+          <svg class="search-icon" width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5.5" stroke="currentColor" stroke-width="1.5"/><path d="M12.5 12.5l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <input type="text" id="searchInput" class="search-input" placeholder="Rechercher un plat…" />
+        </div>
+        <div class="categories" id="categories">
+          <button class="cat-btn active" data-cat="tous">Tous</button>
+          <button class="cat-btn" data-cat="plat principal">Plats Principaux</button>
+          <button class="cat-btn" data-cat="riz">Riz & Céréales</button>
+          <button class="cat-btn" data-cat="légumes">Légumes</button>
+          <button class="cat-btn" data-cat="accompagnement">Accompagnements</button>
+        </div>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+      <div class="empty-state" id="emptyState" style="display:none;"><p>✦ Aucun plat trouvé. Modifiez votre recherche.</p></div>
+    </div>
+  </section>
+
+  <!-- COMMENT COMMANDER -->
+  <section class="comment-commander" id="comment-commander">
+    <div class="comment-commander__bg"></div>
+    <div class="container">
+      <div class="section-header section-header--light">
+        <p class="section-eyebrow section-eyebrow--light">Simple & Transparent</p>
+        <h2 class="section-title section-title--light">Comment Commander ?</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step__num">01</div>
+          <div class="step__icon">👀</div>
+          <h3>Consultez le menu</h3>
+          <p>Parcourez nos plats de la semaine ou notre répertoire complet. Choisissez ce qui vous fait envie.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">02</div>
+          <div class="step__icon">📱</div>
+          <h3>Contactez-nous</h3>
+          <p>Envoyez-nous un message WhatsApp avec le plat choisi et la date souhaitée pour votre livraison.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">03</div>
+          <div class="step__icon">💳</div>
+          <h3>Payez à l'avance</h3>
+          <p>Réglez votre commande par Mobile Money dès confirmation. Votre paiement déclenche la préparation.</p>
+        </div>
+        <div class="step__arrow">→</div>
+        <div class="step">
+          <div class="step__num">04</div>
+          <div class="step__icon">🍽️</div>
+          <h3>Savourez</h3>
+          <p>Le jour J, votre repas est préparé avec soin, fraîcheur et amour — livré chaud à votre porte.</p>
+        </div>
+      </div>
+      <div class="steps__cta">
+        <a href="https://wa.me/22900000000?text=Bonjour%20%C3%89ry%20Delice%2C%20je%20souhaite%20passer%20une%20commande." target="_blank" class="whatsapp-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 23.998l6.31-1.651A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.863 9.863 0 01-5.031-1.376l-.361-.215-3.745.981.999-3.648-.235-.374A9.86 9.86 0 012.106 12C2.106 6.538 6.538 2.106 12 2.106S21.894 6.538 21.894 12 17.462 21.894 12 21.894z"/></svg>
+          Passer une commande maintenant
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section class="engagement" id="engagement">
+    <div class="engagement__bg"></div>
+    <div class="container">
+      <div class="section-header section-header--light">
+        <p class="section-eyebrow section-eyebrow--light">Notre Promesse</p>
+        <h2 class="section-title section-title--light">Notre Engagement</h2>
+      </div>
+      <div class="engagement__grid">
+        <div class="engagement__card"><div class="engagement__icon">🌿</div><h3>Ingrédients Frais</h3><p>Nous achetons les ingrédients uniquement après confirmation de votre commande. Rien n'est préparé à l'avance, tout est fait pour vous.</p></div>
+        <div class="engagement__card"><div class="engagement__icon">✨</div><h3>Hygiène Irréprochable</h3><p>Notre cuisine respecte les normes les plus strictes. Chaque ustensile, chaque surface, chaque geste — tout est pensé pour votre santé.</p></div>
+        <div class="engagement__card"><div class="engagement__icon">🎯</div><h3>Cuisine Personnalisée</h3><p>Vous avez des préférences ou des restrictions alimentaires ? Dites-le nous. Nous adaptons chaque plat avec plaisir et professionnalisme.</p></div>
+        <div class="engagement__card"><div class="engagement__icon">💛</div><h3>Relation de Confiance</h3><p>Vous payez avant, vous nous faites confiance. En retour, nous mettons tout notre cœur dans chaque assiette que nous préparons pour vous.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Parlons-nous</p>
+        <h2 class="section-title">Nous Contacter</h2>
+        <p class="section-desc">Pour une commande, une question ou un événement spécial — écrivez-nous.</p>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <div class="contact__item"><div class="contact__item-icon">📍</div><div><p class="contact__item-label">Adresse</p><p class="contact__item-value">Quartier Ourbouga<br />Natitingou, Bénin</p></div></div>
+          <div class="contact__item"><div class="contact__item-icon">📞</div><div><p class="contact__item-label">Téléphone / WhatsApp</p><p class="contact__item-value">+229 00 00 00 00</p></div></div>
+          <div class="contact__item"><div class="contact__item-icon">💳</div><div><p class="contact__item-label">Paiement accepté</p><p class="contact__item-value">MTN Mobile Money<br />Moov Money</p></div></div>
+          <div class="contact__item"><div class="contact__item-icon">📅</div><div><p class="contact__item-label">Délai de commande</p><p class="contact__item-value">Minimum 2 à 3 jours à l'avance</p></div></div>
+        </div>
+        <div class="contact__actions">
+          <p class="contact__actions-title">Réservez votre repas dès maintenant</p>
+          <p class="contact__actions-desc">Envoyez-nous le nom du plat souhaité et la date de livraison — nous vous confirmons la disponibilité et le montant à régler.</p>
+          <a href="https://wa.me/22900000000?text=Bonjour%20%C3%89ry%20Delice%2C%20je%20souhaite%20commander%20le%20plat%20suivant%20%3A%20%5BNom%20du%20plat%5D%20pour%20le%20%5BDate%5D." target="_blank" class="whatsapp-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.556 4.116 1.528 5.845L.057 23.998l6.31-1.651A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.894a9.863 9.863 0 01-5.031-1.376l-.361-.215-3.745.981.999-3.648-.235-.374A9.86 9.86 0 012.106 12C2.106 6.538 6.538 2.106 12 2.106S21.894 6.538 21.894 12 17.462 21.894 12 21.894z"/></svg>
+            Réserver via WhatsApp
+          </a>
+          <a href="tel:+2290191895055" class="phone-btn">Appeler directement</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand"><div class="footer__logo">✦ ERI~Delice</div><p>Traiteur à commande programmée.<br />Natitingou, Bénin.</p></div>
+        <div class="footer__links">
+          <a href="#menu-semaine">Menu du moment</a>
+          <a href="#specialites">Nos Plats</a>
+          <a href="#comment-commander">Comment commander</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>© 2025 ERI~Delice — Tous droits réservés</p><p>Fait avec ❤️ a Natitingou</p></div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__box" id="modalBox">
+      <button class="modal__close" id="modalClose">✕</button>
+      <div class="modal__img-wrap"><img id="modalImg" src="" alt="" /><div id="modalBadge" class="modal__badge"></div></div>
+      <div class="modal__body">
+        <p id="modalCat" class="modal__cat"></p>
+        <h3 id="modalName" class="modal__name"></h3>
+        <p id="modalDesc" class="modal__desc"></p>
+        <div class="modal__meta"><span id="modalTime" class="modal__time"></span><span id="modalPrice" class="modal__price"></span></div>
+        <p class="modal__notice">📅 Commande minimum <strong>2 à 3 jours à l'avance</strong> — paiement Mobile Money requis</p>
+        <a id="modalWa" href="#" target="_blank" class="modal__order-btn">Réserver ce plat sur WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
